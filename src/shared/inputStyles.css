@@ -1,0 +1,49 @@
+.commonInputClass {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    line-height: 1.5;
+    color: #202020;
+    background: transparent;
+    border: 1px solid #ddd;
+}
+
+.formControl {
+    border: 1px solid #ddd;
+    transition: border 0.3s ease-in-out;
+}
+
+.error {
+    border: 1px solid #d64747;
+    transition: border 0.3s ease-in-out;
+}
+
+.formControl::-moz-placeholder,
+.formControl::placeholder {
+    font-size: 12px;
+    text-align: left;
+    color: #ddd;
+}
+
+.error::-moz-placeholder,
+.error::placeholder {
+    font-size: 12px;
+    text-align: left;
+    color: #d64747;
+}
+
+.formControl:focus,
+.error:focus {
+    outline: none;
+    /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
+    border: 1px solid #0f63e0;
+    transition: border 0.15s ease-in-out;
+}
+
+.formControl:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}

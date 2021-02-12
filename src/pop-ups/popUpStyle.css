@@ -6,12 +6,16 @@
     left: 0;
     bottom: 0;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
     animation: fade 0.3s ease-in-out;
 }
 
 .popUpContent {
+    width: 500px;
     border-radius: 10px;
     box-shadow: 0 0 25px 0 rgba(122, 106, 158, 0.25);
     background-color: #fff;

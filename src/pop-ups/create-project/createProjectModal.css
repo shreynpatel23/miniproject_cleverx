@@ -1,0 +1,45 @@
+.modal_header {
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal_body {
+    padding: 30px;
+}
+
+.modal_header_text {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #202020;
+}
+
+.close_modal {
+    position: absolute;
+    bottom: 23px;
+    right: 35px;
+}
+
+.close_svg {
+    fill: #202020;
+    cursor: pointer;
+}
+
+.close_svg:hover {
+    fill: #d64747;
+    transition: fill 0.3s;
+}
+
+.form_field_wrapper {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form_field_error_wrapper {
+    padding: 15px 0 0;
+    display: flex;
+    justify-content: center;
+}
