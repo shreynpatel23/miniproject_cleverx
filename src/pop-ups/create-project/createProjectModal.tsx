@@ -246,13 +246,13 @@ function CreateProjectModal({ onCloseModal, onAddProject }: any) {
           <div className="form_field_wrapper" style={{ padding: "10px 5px" }}>
             <p className="informative_text">CleverX transaction fees (20%)</p>
             <p style={{ marginLeft: "auto" }} className="informative_text">
-              $0.00
+              ${(newProject.cost * 20) / 100}
             </p>
           </div>
           <div className="form_field_wrapper" style={{ padding: "10px 5px" }}>
             <p className="informative_text">Total amount in $USD</p>
             <p style={{ marginLeft: "auto" }} className="informative_text">
-              $0.00
+              ${Number(newProject.cost) + (Number(newProject.cost) * 20) / 100}
             </p>
           </div>
           <div className="form_field_wrapper">

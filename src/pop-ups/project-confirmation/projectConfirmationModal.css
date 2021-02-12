@@ -1,0 +1,84 @@
+.loading_wrapper {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation_modal_header {
+    padding: 25px;
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.name_and_cost_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.project_name {
+    font-size: 16px;
+    text-align: left;
+    font-weight: 500;
+    color: #202020;
+}
+
+.project_cost {
+    font-size: 14px;
+    margin-left: auto;
+    color: #0f63e0;
+}
+
+.project_description {
+    font-size: 14px;
+    padding-bottom: 10px;
+    color: #202020;
+}
+
+.total_cost_wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total_text {
+    font-size: 12px;
+    text-align: right;
+    color: #aaa;
+}
+
+.delivery_and_attachment_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.delivery_wrapper {
+    padding: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.attachment_wrapper {
+    padding: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.svg {
+    padding: 0 5px;
+    margin-top: 3px;
+}
+
+.option_text {
+    font-size: 13px;
+    text-align: left;
+    color: #202020;
+    padding: 0 5px;
+}
+
+.confirmation_modal_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
