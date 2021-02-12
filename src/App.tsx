@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import CreateProjectModal from "./pop-ups/create-project/createProjectModal";
+import SelectCardModal from "./pop-ups/select-card/selectCardModal";
 import Button from "./shared/button/button";
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     toggleCreateProjectModal,
     setToggleCreateProjectModal,
   ] = React.useState(false);
+  const [toggleSelectCardModal, setToggleSelectCardModal] = React.useState(
+    false
+  );
   return (
     <div className="wrapper">
       <div className="playground">
@@ -18,7 +22,23 @@ function App() {
       </div>
       {toggleCreateProjectModal && (
         <CreateProjectModal
-          closeModal={() => setToggleCreateProjectModal(false)}
+          onCloseModal={() => setToggleCreateProjectModal(false)}
+          onAddProject={() => {
+            setToggleCreateProjectModal(false);
+            setToggleSelectCardModal(true);
+          }}
+        />
+      )}
+      {toggleSelectCardModal && (
+        <SelectCardModal
+          onCloseModal={() => setToggleSelectCardModal(false)}
+          onPaymentDone={() => {
+            setToggleSelectCardModal(false);
+          }}
+          onGoingBack={() => {
+            setToggleSelectCardModal(false);
+            setToggleCreateProjectModal(true);
+          }}
         />
       )}
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Close({ classes, onClick, width = "7", height = "7" }: any) {
+function Close({ classes, onClick, width = "7", height = "7", props }: any) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,7 @@ function Close({ classes, onClick, width = "7", height = "7" }: any) {
       viewBox="0 0 19.141 19.137"
       className={classes}
       onClick={onClick}
+      {...props}
     >
       <path
         id="Union_20"

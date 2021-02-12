@@ -1,8 +1,6 @@
 import axios from "axios";
 axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
-console.log(axios.defaults.baseURL);
 export function createProject(data: any) {
-  console.log(data);
   return new Promise(async (resolve, reject) => {
     try {
       const response = await axios.post("/project", data);
