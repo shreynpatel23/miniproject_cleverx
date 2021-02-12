@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import CreateProjectModal from "./pop-ups/create-project/createProjectModal";
+import Button from "./shared/button/button";
 
 function App() {
   const [
@@ -10,11 +11,16 @@ function App() {
   return (
     <div className="wrapper">
       <div className="playground">
-        <button className="button" onClick={() => setToggleCreateProjectModal(true)}>
-          <p className="button_text">Create Project</p>
-        </button>
+        <Button
+          button_text="Create Project"
+          onClick={() => setToggleCreateProjectModal(true)}
+        />
       </div>
-      {toggleCreateProjectModal && <CreateProjectModal />}
+      {toggleCreateProjectModal && (
+        <CreateProjectModal
+          closeModal={() => setToggleCreateProjectModal(false)}
+        />
+      )}
     </div>
   );
 }
