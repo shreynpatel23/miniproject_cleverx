@@ -1,3 +1,9 @@
+.loading_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .dot1,
 .dot2,
 .dot3,

@@ -17,3 +17,8 @@
     background: #0a4d88;
     transition: background 0.25s ease-in;
 }
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}

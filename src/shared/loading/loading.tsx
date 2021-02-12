@@ -3,10 +3,7 @@ import "./loading.css";
 function Loading({ loadingColor, width = "14px", height = "14px" }: any) {
   const loadingDefault = "#fff";
   return (
-    <div
-      className="d-flex align-items-center justify-content-center"
-      style={{ height: "100%" }}
-    >
+    <div className="loading_wrapper" style={{ height: "100%" }}>
       <div
         className="dot1"
         style={{

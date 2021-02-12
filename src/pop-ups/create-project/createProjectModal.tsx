@@ -6,6 +6,7 @@ import "../popUpStyle.css";
 import "./createProjectModal.css";
 import "../../shared/inputStyles.css";
 import ErrorMessage from "../../shared/error-message/errorMessage";
+import { createProject } from "../../api/axios";
 
 function CreateProjectModal({ closeModal }: any) {
   const [newProject, setNewProject] = React.useState({
@@ -20,6 +21,7 @@ function CreateProjectModal({ closeModal }: any) {
     costError: "",
     dateError: "",
   });
+  const [loading, setLoading] = React.useState(false);
   const todaysDate = new Date();
   // minimum date will be set to todays date
   const minDate = `${todaysDate.getFullYear()}-${checkMonth(
@@ -95,7 +97,7 @@ function CreateProjectModal({ closeModal }: any) {
     return true;
   }
   // use this function create a new project
-  function createNewProject() {
+  async function createNewProject() {
     const allChecksPassed = [
       checkProjectName(),
       checkProjectSummary(),
@@ -103,10 +105,16 @@ function CreateProjectModal({ closeModal }: any) {
       checkProjectCost(),
     ].every(Boolean);
     if (allChecksPassed) {
-      console.log(newProject);
-      const date = new Date(newProject.date);
-      console.log(date.toISOString());
-      closeModal();
+      setLoading(true);
+      try {
+        const date = new Date(newProject.date);
+        await createProject({ ...newProject, date: date.toISOString() });
+        setLoading(false);
+        closeModal();
+      } catch (err) {
+        setLoading(false);
+        console.log(err);
+      }
     }
   }
   return (
@@ -176,7 +184,7 @@ function CreateProjectModal({ closeModal }: any) {
                 error.summaryError !== "" ? "error" : "formControl"
               }`}
               maxLength={200}
-              style={{ resize: "none" }}
+              style={{ resize: "none", fontFamily: "Poppins" }}
               onBlur={checkProjectSummary}
             ></textarea>
           </div>
@@ -236,7 +244,12 @@ function CreateProjectModal({ closeModal }: any) {
           </div>
           {error.costError && <ErrorMessage>{error.costError}</ErrorMessage>}
           <div className="form_field_wrapper">
-            <Button button_text="Create Project" onClick={createNewProject} />
+            <Button
+              button_text="Create Project"
+              onClick={createNewProject}
+              disabled={loading}
+              isLoading={loading}
+            />
           </div>
         </div>
       </div>
