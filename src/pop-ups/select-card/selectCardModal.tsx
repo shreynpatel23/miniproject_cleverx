@@ -8,6 +8,7 @@ import ArrowDown from "../../assets/svg/arrowDown";
 import Tick from "../../assets/svg/tickSvg";
 import VisaImage from "../../assets/images/visa.png";
 function SelectCardModal({ onCloseModal, onPaymentDone, onGoingBack }: any) {
+  // this is a constant to render the number of cards in UI.
   const listOfCards = [
     { cardNumber: "2345" },
     { cardNumber: "7654" },
