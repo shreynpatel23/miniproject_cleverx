@@ -8,7 +8,7 @@ import "../../shared/inputStyles.css";
 import ErrorMessage from "../../shared/error-message/errorMessage";
 import { createProject } from "../../api/axios";
 
-function CreateProjectModal({ closeModal }: any) {
+function CreateProjectModal({ onCloseModal, onAddProject }: any) {
   const [newProject, setNewProject] = React.useState({
     name: "",
     summary: "",
@@ -110,7 +110,7 @@ function CreateProjectModal({ closeModal }: any) {
         const date = new Date(newProject.date);
         await createProject({ ...newProject, date: date.toISOString() });
         setLoading(false);
-        closeModal();
+        onAddProject();
       } catch (err) {
         setLoading(false);
         console.log(err);
@@ -127,7 +127,7 @@ function CreateProjectModal({ closeModal }: any) {
               classes="close_svg"
               width="15"
               height="15"
-              onClick={() => closeModal()}
+              onClick={() => onCloseModal()}
             />
           </div>
         </div>
@@ -243,6 +243,18 @@ function CreateProjectModal({ closeModal }: any) {
             />
           </div>
           {error.costError && <ErrorMessage>{error.costError}</ErrorMessage>}
+          <div className="form_field_wrapper" style={{ padding: "10px 5px" }}>
+            <p className="informative_text">CleverX transaction fees (20%)</p>
+            <p style={{ marginLeft: "auto" }} className="informative_text">
+              $0.00
+            </p>
+          </div>
+          <div className="form_field_wrapper" style={{ padding: "10px 5px" }}>
+            <p className="informative_text">Total amount in $USD</p>
+            <p style={{ marginLeft: "auto" }} className="informative_text">
+              $0.00
+            </p>
+          </div>
           <div className="form_field_wrapper">
             <Button
               button_text="Create Project"

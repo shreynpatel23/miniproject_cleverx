@@ -23,7 +23,7 @@
 }
 
 .close_svg {
-    fill: #202020;
+    fill: #aaa;
     cursor: pointer;
 }
 
@@ -32,14 +32,8 @@
     transition: fill 0.3s;
 }
 
-.form_field_wrapper {
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.form_field_error_wrapper {
-    padding: 15px 0 0;
-    display: flex;
-    justify-content: center;
+.informative_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaa;
 }

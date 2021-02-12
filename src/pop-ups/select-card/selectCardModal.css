@@ -1,0 +1,82 @@
+.card_overlay {
+    min-height: 350px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.card_wrapper {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card_wrapper:hover {
+    border: 1px solid #0f63e0;
+    transition: border 0.3s;
+}
+
+.selected_card {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0f63e0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card_number_text {
+    font-size: 13px;
+    color: #aaa;
+    margin-left: auto;
+}
+
+.span {
+    padding: 0 2px;
+    color: #222;
+}
+
+.card_items_spacing {
+    padding: 5px 10px;
+}
+
+.add_card_wrapper {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add_card_wrapper:hover {
+    border: 1px solid #0f63e0;
+    transition: border 0.3s;
+}
+
+.add_card_text {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.back_arrow_wrapper {
+    position: absolute;
+    bottom: 23px;
+    left: 35px;
+}
+
+.back_arrow_svg {
+    transform: rotate(90deg);
+    fill: #aaa;
+    cursor: pointer;
+}
+
+.back_arrow_svg:hover {
+    fill: #0f63e0;
+    transition: fill 0.3s;
+}

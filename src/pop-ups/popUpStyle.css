@@ -21,6 +21,18 @@
     background-color: #fff;
 }
 
+.form_field_wrapper {
+    padding: 13px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form_field_error_wrapper {
+    padding: 13px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
